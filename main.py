@@ -17,12 +17,16 @@ def cadastrar():
     print("Aluno cadastrado.")
 
 def listar():
-    if not alunos:
+    if len(alunos) == 0:
         print("Nenhum aluno cadastrado.")
         return
 
-    for aluno in alunos:
-        print(aluno)
+    print("\n--- ALUNOS ---")
+
+    for numero, aluno in enumerate(alunos, start=1):
+        print(f"{numero}. {aluno}")
+
+    print(f"Total: {len(alunos)} aluno(s)")
 
 while True:
     print("\n--- CADASTRO DE ALUNOS ---")
