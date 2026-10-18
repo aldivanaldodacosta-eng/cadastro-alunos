@@ -16,9 +16,18 @@ def cadastrar():
     alunos.append(nome)
     print("Aluno cadastrado.")
 
+def listar():
+    if not alunos:
+        print("Nenhum aluno cadastrado.")
+        return
+
+    for aluno in alunos:
+        print(aluno)
+
 while True:
     print("\n--- CADASTRO DE ALUNOS ---")
     print("1 - Cadastrar")
+    print("2 - Listar")
     print("0 - Sair")
 
     opcao = input("Escolha: ")
@@ -28,5 +37,7 @@ while True:
         break
     elif opcao == "1":
         cadastrar()
+    elif opcao == "2":
+        listar()
     else:
         print("Opção inválida.")
